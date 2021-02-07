@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layout/default/default.component';
-import { HomeComponent } from './modules/home/home.component';
+// import { HomeComponent } from './modules/home/home.component';
+import { BooksComponent } from './modules/books/books.component'
+import { BooksModule } from './modules/books/books.module'
 
 
 const router: Routes = [
@@ -11,8 +13,8 @@ const router: Routes = [
     component: DefaultComponent,
     children: [
       {
-        path: '',
-        component: HomeComponent
+        path: 'books',
+        loadChildren: () => import('./modules/books/books.module').then(m => m.BooksModule)
       }
     ]
   }
