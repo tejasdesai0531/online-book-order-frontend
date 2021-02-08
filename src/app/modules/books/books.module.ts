@@ -5,11 +5,12 @@ import { RouterModule } from '@angular/router';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookCategoriesComponent } from './book-categories/book-categories.component';
 import { BooksRoutingModule } from './books-routing.module';
+import { BookLandingComponent } from './book-landing/book-landing.component';
 
 
 
 @NgModule({
-  declarations: [BooksComponent, BookListComponent, BookCategoriesComponent],
+  declarations: [BooksComponent, BookListComponent, BookCategoriesComponent, BookLandingComponent],
   imports: [
     CommonModule,
     RouterModule,

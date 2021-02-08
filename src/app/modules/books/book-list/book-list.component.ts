@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,13 +8,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BookListComponent implements OnInit {
 
-  public category: string
+  @Input() category: string;
+  public selectedCategory: string;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.category = this.route.snapshot.paramMap.get("category")
-    console.log(this.category)
+    this.selectedCategory = this.route.snapshot.paramMap.get("category")
+    console.log(this.selectedCategory)
   }
 
 }

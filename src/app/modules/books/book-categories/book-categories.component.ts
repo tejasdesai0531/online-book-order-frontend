@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-book-categories',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookCategoriesComponent implements OnInit {
 
+  @Output() categoryChangeEvent = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  categoryChange(i) {
+    this.categoryChangeEvent.emit(`category${i}`)
   }
 
 }
