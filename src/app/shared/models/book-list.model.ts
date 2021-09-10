@@ -1,9 +1,9 @@
-export class BookModel {
+export interface BookList {
     error:  boolean;
-    result: Book[];
+    books: Book[];
 }
 
-export class Book {
+export interface Book {
     _id:         string;
     name:        string;
     author:      string;

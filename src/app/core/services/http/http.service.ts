@@ -19,7 +19,7 @@ export class HttpService {
   ) { }
 
 
-  requestCall<T>(api: string, method: ApiMethod, data?: any, params?: any): Observable<T> {
+  requestCall(api: string, method: ApiMethod, data?: any, params?: any): Observable<any> {
 
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -29,19 +29,19 @@ export class HttpService {
     let response;
     switch(method) {
       case ApiMethod.GET:
-        response = this.http.get<T>(`${environment.apiUrl}${api}`, { headers: headers, params: params })
+        response = this.http.get(`${environment.apiUrl}${api}`, { headers: headers, params: params })
             .pipe(catchError((err) => this.handleError(err, this)));
         break;
       case ApiMethod.POST:
-        response = this.http.post<T>(`${environment.apiUrl}${api}`, data, { headers: headers, params: params })
+        response = this.http.post(`${environment.apiUrl}${api}`, data, { headers: headers, params: params })
             .pipe(catchError((err) => this.handleError(err, this)));
         break;
       case ApiMethod.PUT:
-      response = this.http.put<T>(`${environment.apiUrl}${api}`, data, { headers: headers, params: params })
+      response = this.http.put(`${environment.apiUrl}${api}`, data, { headers: headers, params: params })
           .pipe(catchError((err) => this.handleError(err, this)));
         break;
       case ApiMethod.DELETE:
-      response = this.http.delete<T>(`${environment.apiUrl}${api}`, params)
+      response = this.http.delete(`${environment.apiUrl}${api}`, params)
           .pipe(catchError((err) => this.handleError(err, this)));
         break;
       default:

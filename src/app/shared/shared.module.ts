@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
   declarations: [HeaderComponent, LoadingIndicatorComponent, FooterComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatIconModule
   ],
   exports: [
     HeaderComponent,

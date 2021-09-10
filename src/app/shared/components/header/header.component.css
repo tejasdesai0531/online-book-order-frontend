@@ -1,0 +1,115 @@
+img {
+    width: 100%;
+}
+
+.header {
+    height: 80px;
+    background-color: #BC3232;
+    display: flex;
+    align-items: center;
+    padding: 0 130px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.search-box {
+    margin-left: 100px;
+    height: 30px;
+    width: 40%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 1px 1px #404040;
+    display: flex;
+    position: relative;
+}
+
+.search-box > input {
+    width: 100%;
+    padding-left: 10px;
+    outline: none;
+}
+
+.search-box > mat-icon {
+    position: absolute;
+    color: #404040;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.account {
+    margin-left: auto;
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 30px;
+}
+
+.login {
+    margin: auto 0;
+    margin-left: 10px;
+    padding: 0 10px
+}
+.signup {
+    margin: auto 0;
+    margin-right: 10px;
+    padding: 0 10px
+}
+
+.seperator {
+    width: 1px;
+    height: 20px;
+    margin: auto 0;
+    background-color: #404040;
+}
+
+.profile {
+    background-color: #404040;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-icon {
+    color: white
+}
+
+.cart {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    background-color: white;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.count {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #BC3232;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cart-icon {
+    background-color: #404040;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
